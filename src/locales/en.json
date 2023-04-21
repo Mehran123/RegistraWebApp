@@ -1,0 +1,514 @@
+{
+  "addConsortium": {
+    "label": "Add Consortium"
+  },
+  "createNewContact": {
+    "label": "Add Contact"
+  },
+  "editContact": {
+    "label": "Edit contact"
+  },
+  "project": {
+    "no": {
+      "label": "Project No"
+    },
+    "projectLead": {
+      "label": "Lead Project"
+    },
+    "isUpdate": {
+      "label": "Update"
+    },
+    "name": {
+      "label": "Name"
+    },
+    "businessLine": {
+      "label": "Business Line"
+    },
+    "legalEntity": {
+      "label": "Originator"
+    },
+    "representative": {
+      "label": "Representative"
+    },
+    "area": {
+      "label": "Regulatory Area"
+    },
+    "legislation": {
+      "label": "Legislation"
+    },
+    "startAt": {
+      "label": "Project Start"
+    },
+    "updatedAt": {
+      "label": "Last Change On"
+    },
+    "createdAt": {
+      "label": "Created On"
+    },
+    "targetLegislationStatus": {
+      "label": "Target Legislation Status"
+    },
+    "manager": {
+      "label": "Responsible"
+    },
+    "localManager": {
+      "label": "Local Responsible"
+    },
+    "businessUnitContact": {
+      "label": "Business Unit Contact"
+    },
+    "businessUnitId": {
+      "label": "Business Unit"
+    },
+    "deadline": {
+      "label": "Deadline"
+    },
+    "registrationValidUntil": {
+      "label": "Registration Valid Until"
+    },
+    "isLabelingRequired": {
+      "label": "Labeling Obligation"
+    },
+    "isEsdsRequired": {
+      "label": "eSDS Required"
+    },
+    "isConsortium": {
+      "label": "Consortial"
+    },
+    "isPbt": {
+      "label": "Is PBT"
+    },
+    "isNano": {
+      "label": "Is Nano"
+    },
+    "isReadAcross": {
+      "label": "Is Read Across"
+    },
+    "isDqChecked": {
+      "label": "Data Quality Checked"
+    },
+    "lanxessRoles": {
+      "label": "Lanxess Roles"
+    },
+    "hasRoleImporter": {
+      "label": "Acts as Importer"
+    },
+    "hasRoleManufacturer": {
+      "label": "Acts as Manufacturer"
+    },
+    "hasRoleOnlyRepresentative": {
+      "label": "Only Representative"
+    },
+    "isDossierAvailableForPurchase": {
+      "label": "Dossier sales by LXS"
+    },
+    "isLocked": {
+      "label": "Locked"
+    },
+    "isUpdate": {
+      "label": "Update"
+    },
+    "isNonPhaseIn": {
+      "label": "Non Phase In"
+    },
+    "gPM4": {
+      "label": "GPM4"
+    },
+    "isListedOnAnnex": {
+      "label": "Listed on Annex XVII"
+    },
+    "isListedOnAuth": {
+      "label": "Listed on Authorisation List"
+    },
+    "isListedOnCandidatelist": {
+      "label": "Listed on Candidate List"
+    },
+    "hasRoleOwnUse": {
+      "label": "Own Use"
+    },
+    "quality": {
+      "label": "Dossier Quality"
+    },
+    "identifiers": {
+      "label": "Identifiers"
+    },
+    "notesTasks": {
+      "label": "Notes / Tasks"
+    },
+    "notes": {
+      "label": "Notes",
+      "empty": "You can add notes in Edit mode."
+    },
+    "tasks": {
+      "label": "Tasks",
+      "empty": "You can add tasks in Edit mode."
+    },
+    "contact": {
+      "label": "Contact"
+    },
+    "registrationNumber": {
+      "label": "Registration No"
+    },
+    "authority": {
+      "authorityReference": "Authority Reference",
+      "registrationAtAuthorityOn": "Registration At Authority On",
+      "jointSubmissionName": "Joint Submission Name",
+      "submissionReferenceId": "Submission Id",
+      "registrationName": "Registration Name",
+      "authorityRemarks": "Remarks",
+      "authorityName": "Authority",
+      "authorityDemands": "Authority Demands"
+    },
+    "substance": {
+      "label": "Substance"
+    },
+    "businessUnit": {
+      "label": "Business Unit"
+    },
+    "currentLegislationStatus": {
+      "label": "Current Legislation Status"
+    },
+    "isArchived": {
+      "label": "Is Archived"
+    },
+    "status": {
+      "label": "Status"
+    },
+    "authorityReference": {
+      "label": "Authority Reference"
+    },
+    "authorityDemands": {
+      "label": "Authority Demands"
+    },
+    "RegistrationAtAuthorityOn": {
+      "label": "Registration date"
+    },
+    "jointSubmissionName": {
+      "label": "Joint Submission"
+    },
+    "submissionReferenceId": {
+      "label": "Submission Id"
+    },
+    "registrationName": {
+      "label": "Registration Name"
+    },
+    "attachments": {
+      "authorityGeneral": {
+        "label": "General Documents"
+      },
+      "authorityWorkflow": {
+        "label": "Workflow Documents"
+      },
+      "attributes": {
+        "submissionId": {
+          "label": "Submission ID"
+        },
+        "reason": {
+          "label": "Reason"
+        }
+      }
+    },
+    "ceficCode": {
+      "label": "CEFIC Code"
+    },
+    "save": {
+      "success": {
+        "info": "Project saved successfully"
+      },
+      "invalid": {
+        "info": "Some data is invalid. Please correct before saving."
+      },
+      "error": {
+        "info": "Error on saving project. Please try again later or contact support if the problem persists."
+      }
+    },
+    "dataGapsPreliminaryAnalysisPc": {
+      "label": "PC"
+    },
+    "dataGapsPreliminaryAnalysisTox": {
+      "label": "Tox"
+    },
+    "dataGapsPreliminaryAnalysisEcoTox": {
+      "label": "Eco Tox"
+    },
+    "dataGapsPreliminaryAnalysisSpectraMethods": {
+      "label": "Sepctra / Methods"
+    },
+    "dataGapsThoroughAnalysisTox": {
+      "label": "Tox"
+    },
+    "dataGapsThoroughAnalysisPc": {
+      "label": "PC"
+    },
+    "dataGapsThoroughAnalysisEcoTox": {
+      "label": "Eco Tox"
+    },
+    "dataGapsThoroughAnalysisSpectraMethods": {
+      "label": "Spectra / Methods"
+    },
+    "dataGapsBusinessUnitQuestionarySentAt": {
+      "label": "Sent On"
+    },
+    "dataGapsBusinessUnitQuestionaryReviewedAt": {
+      "label": "Reviewed On"
+    },
+    "type": {
+      "label": "Project Type"
+    },
+    "isDisabled": {
+      "label": "Is Disabled"
+    },
+    "tags": {
+      "label": "Tags"
+    },
+    "registrationName": {
+      "label": "Registration Name"
+    }
+  },
+  "contactDetails": {
+    "title": "Contact Details",
+    "label": "Contact Details"
+  },
+  "contact": {
+    "isLegalEntity": {
+      "label": "Is Legal Entity"
+    },
+    "company": {
+      "label": "Company"
+    },
+    "firstName": {
+      "label": "First Name"
+    },
+    "lastName": {
+      "label": "Last Name"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "address1": {
+      "label": "Address (1)"
+    },
+    "address2": {
+      "label": "Address (2)"
+    },
+    "address3": {
+      "label": "Address (3)"
+    },
+    "phone": {
+      "label": "Phone"
+    },
+    "phone2": {
+      "label": "Phone 2"
+    },
+    "country": {
+      "label": "Country"
+    },
+    "region": {
+      "label": "Region"
+    },
+    "postalCode": {
+      "label": "Postal Code"
+    },
+    "place": {
+      "label": "City / Place"
+    },
+    "notes": {
+      "label": "Notes"
+    }
+  },
+  "yes": "Yes",
+  "no": "No",
+  "createProject": {
+    "title": "Create Project"
+  },
+  "addProject": {
+    "label": "Add Project"
+  },
+  "createSubstance": {
+    "title": "Create Substance"
+  },
+  "createSubstanceView": {
+    "create": "create",
+    "createAndMore": "create & add more",
+    "createUnknownError": "An error occured during substance creation. Please try again later or contact support.",
+    "createSuccess": "Substance has been successfully created"
+  },
+  "addSubstance": {
+    "label": "Add Substance"
+  },
+  "projectOverview": {
+    "title": "Project Overview"
+  },
+  "authority": {
+    "name": {
+      "label": "Authority"
+    }
+  },
+  "attachment": {
+    "name": {
+      "label": "Name"
+    },
+    "dueAt": {
+      "label": "Due On"
+    },
+    "remindAt": {
+      "label": "Remind Me On"
+    },
+    "tags": {
+      "label": "Tags"
+    },
+    "noAttachments": "No attachments yet"
+  },
+  "upload": {
+    "label": "Drop your files here or click to upload"
+  },
+  "delete": {
+    "label": "Delete"
+  },
+  "notes": {
+    "sorting": {
+      "oldestFirst": {
+        "label": "Oldest First"
+      },
+      "newestFirst": {
+        "label": "Newest First"
+      }
+    },
+    "addNote": {
+      "label": "Add Note"
+    },
+    "addTask": {
+      "label": "Add Task"
+    },
+    "noNotes": {
+      "text": "No notes yet"
+    },
+    "noTasks": {
+      "text": "No tasks yet"
+    },
+    "noNotesAndTasks": {
+      "text": "No notes or tasks yet"
+    }
+  },
+  "note": {
+    "dueAt": {
+      "label": "Due On"
+    },
+    "isTask": {
+      "label": "Is A Task"
+    },
+    "remindAt": {
+      "label": "Remind Me On"
+    },
+    "delete": {
+      "label": "Delete This Note",
+      "confirmation": "Are you sure you want to delete this note: '{title}'?"
+    }
+  },
+  "identifier": {
+    "add": {
+      "label": "Add Identifier"
+    },
+    "delete": {
+      "confirmation": "Are you sure you want to delete the identifier '{key}'?"
+    }
+  },
+  "legalStatus": {
+    "title": "Legal Status",
+    "id": "ID",
+    "legalEntity": "Originator",
+    "representative": "Representative",
+    "substance": "Substance",
+    "status": "Status",
+    "tonnage": "Tonnage",
+    "legislation": "Legislation",
+    "expiresOn": "Expires on",
+    "registrationNumber": "Registration Number"
+  },
+  "substance": {
+    "dossierQuality": {
+      "label": "Dossier Quality"
+    },
+    "legislation":{
+      "label":"Legislation"
+    },
+    "identifiers": {
+      "label": "Identifiers"
+    },
+    "substanceType": {
+      "label": "Substance Type"
+    },
+    "addSubstanceType": {
+      "label": "Add Substance Type for Legislation"
+    },
+    "addSubstanceTypeExtension": {
+      "label": "(After saving is displayed in the below tab)"
+    },
+
+    "specificationId": {
+      "label": "SAP EHS Specification Id"
+    },
+    "save": {
+      "error": {
+        "info": "Error on saving substance"
+      },
+      "success": {
+        "info": "Saved substance successfully"
+      },
+      "duplicate":{
+        "info": "This combination of substance type and legislation already exists. Please select other combination!"
+      }
+
+    },
+    "expertUser": {
+      "label": "Substance Expert"
+    },
+    "aliases": {
+      "label": "Aliases"
+    },
+    "substanceType": {
+      "label": "Substance Type"
+    }    
+  },
+  "substances": {
+    "title": "Substances"
+  },
+  "format": {
+    "shortDate": "yyyy-MM-dd"
+  },
+  "unknown": "Unknown",
+  "unknownError": "An error occured during project creation. Please try again later or contact support.",
+  "editProject": {
+    "label": "Edit this project"
+  },
+  "showProject": {
+    "label": "Show this project"
+  },
+  "createProjectView": {
+    "create": "create",
+    "createAndNew": "create & add more",
+    "createUnknownError": "An error occured during project creation. Please try again later or contact support.",
+    "createSuccess": "Project has been successfully created"
+  },
+  "projectDetailsView": {
+    "baseData": {
+      "heading": {
+        "projectInformation": "Project Information",
+        "legalInformation": "Legal Information",
+        "substanceInformation": "Substance Information",
+        "contactInformation": "Contact Information",
+        "lanxessRoles": "LANXESS's role(s)",
+        "eUReachSpecific":"EU REACH specific"
+      }
+    }
+  },
+  "alias": {
+    "delete": {
+      "confirmation": "Are you sure you want to delete the alias '{key}'",
+      "label": "delete"
+    },
+    "add": {
+      "label": "add alias"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+html * {
+	font-family: 'Lato', serif;
+}
+
+.theme--light.v-divider {
+	border-bottom: thin rgba(0, 0, 0, 0.12);
+}
+
+.d-flex {
+	display: flex;
+}
+
+.d-flex-column {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.d-flex-center {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.d-flex-end {
+	display: flex;
+	justify-content: flex-end;
+	align-content: center;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.pointer .has-background-excel {
+	background-color: $color-excel;
+	color: white;
+	&:hover {
+		background-color: $color-excel-darker;
+		color: white;
+	}
+}
+//
+//.v-application--is-ltr .v-input--selection-controls__input {
+//  margin: 0 !important;
+//}
+
+.h-auto {
+	height: auto !important;
+}

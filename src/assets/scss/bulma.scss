@@ -1,0 +1,123 @@
+// Import Bulma's core
+@import '~bulma/sass/utilities/_all';
+
+// Set your colors
+$primary: #1a73e8;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099ff;
+$twitter-invert: findColorInvert($twitter);
+$table-row-active-background-color: $grey-light;
+$table-striped-row-even-hover-background-color: #eaeaea;
+$table-row-hover-background-color: #eaeaea;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+	'white': (
+		$white,
+		$black
+	),
+	'black': (
+		$black,
+		$white
+	),
+	'light': (
+		$light,
+		$light-invert
+	),
+	'dark': (
+		$dark,
+		$dark-invert
+	),
+	'primary': (
+		$primary,
+		$primary-invert
+	),
+	'info': (
+		$info,
+		$info-invert
+	),
+	'success': (
+		$success,
+		$success-invert
+	),
+	'warning': (
+		$warning,
+		$warning-invert
+	),
+	'danger': (
+		$danger,
+		$danger-invert
+	),
+	'twitter': (
+		$twitter,
+		$twitter-invert
+	)
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Import Bulma and Buefy styles
+@import '~bulma';
+@import '~buefy/src/scss/buefy';
+
+.field {
+	&:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.field > .field {
+	margin-bottom: 0;
+}
+
+.table.has-no-cell-borders td {
+	border: 0 !important;
+}
+
+$size-7: 10px;
+$size-6: 20px;
+$size-5: 30px;
+$size-4: 40px;
+$size-3: 50px;
+$size-2: 60px;
+$size-1: 70px;
+$size-0: 0;
+
+$sizes: (0, 1, 2, 3, 4, 5, 6, 7);
+$positions: ('top', 'left', 'bottom', 'right');
+$bulmaSizes: ($size-0, $size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7);
+$i: 1;
+
+@each $size in $sizes {
+	$sizee: nth($bulmaSizes, $i);
+	$i: $i + 1;
+
+	.has-margin-#{$size} {
+		margin: $sizee !important;
+	}
+
+	.has-negative-margin-#{$size} {
+		margin: -$sizee !important;
+	}
+
+	.has-padding-#{$size} {
+		padding: $sizee !important;
+	}
+
+	@each $position in $positions {
+		.has-margin-#{$position}-#{$size} {
+			margin-#{$position}: $sizee !important;
+		}
+
+		.has-padding-#{$position}-#{$size} {
+			padding-#{$position}: $sizee !important;
+		}
+
+		.has-negative-margin-#{$position}-#{$size} {
+			margin-#{$position}: -$sizee !important;
+		}
+	}
+}

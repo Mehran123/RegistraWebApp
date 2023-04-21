@@ -1,0 +1,28 @@
+export const statuses = [
+	'Unknown',
+	'Preparation',
+	'InProgress',
+	'Delayed',
+	'Postponed',
+	'Finished'
+	// 'annulled',
+	// 'cancelled',
+	// 'checked',
+	// 'concluded',
+	// 'done',
+	// 'draft decision onging',
+	// 'draft decision submitted',
+	// 'expired',
+	// 'final decision ongoing',
+	// 'final decision submitted',
+	// 'manufacture ceased',
+	// 'no action',
+	// 'no registration',
+	// 'on hold',
+	// 'ongoing',
+	// 'planning',
+	// 'registered',
+	// 'submitted',
+	// 'terminated',
+	// 'under examination'
+];
