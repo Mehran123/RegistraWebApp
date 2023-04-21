@@ -1,0 +1,101 @@
+kind: pipeline
+type: docker
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+  - name: build
+    image: node:15-alpine
+    network_mode: host
+    environment:
+      ssh_prv_key:
+        from_secret: ssh_prv_key
+    commands:
+      - env
+      - if [ $DRONE_BRANCH = dev ]; then export NODE_ENV=Development; fi
+      - if [ $DRONE_BRANCH = qa ]; then export NODE_ENV=Staging; fi
+      - if [ $DRONE_BRANCH = master ]; then export NODE_ENV=Production; fi
+      - echo $DRONE_BRANCH
+      - echo $NODE_ENV
+      - apk update
+      - apk add --no-cache curl p7zip jq yarn openssh-client python2 make g++ gcc libgcc libstdc++ linux-headers git
+      - version=$(cat ./package.json | jq -r '.version')
+      - applicationName=$(cat ./package.json | jq -r '.name')
+      - mkdir -p ~/.ssh
+      - chmod 0700 ~/.ssh
+      - ssh-keyscan -t rsa -p 8200 git.crd.lanxess >> ~/.ssh/known_hosts
+      - ssh-keyscan -t rsa dev-services.crd.lanxess >> ~/.ssh/known_hosts
+      - echo "    IdentityFile ~/.ssh/id_rsa" >> /etc/ssh/ssh_config
+      - echo "$ssh_prv_key" > ~/.ssh/id_rsa
+      - cat ~/.ssh/id_rsa
+      - chmod 700 ~/.ssh/id_rsa
+      - yarn install
+      - yarn build
+      - 7z a -r -t7z -mx9 "publish.7z" "./publish/*"
+      - scp ./publish.7z LMGLOMB2@dev-services.crd.lanxess:/data/releases/$${applicationName}-$${version}.7z
+
+  - name: deploy
+    image: node
+    network_mode: host
+    environment:
+      devServerAddress: dev.registra.hseq.lanxess
+      qaServerAddress: qas.registra.hseq.lanxess
+      prodServerAddress: registra.hseq.lanxess
+      serverTargetFolderName: registration-tracking
+      serverTargetRootFolderPath: "D:/inetpub"
+      ssh_prv_key: 
+        from_secret: ssh_prv_key
+      ssh_pub_key:
+        from_secret: ssh_pub_key
+    commands:
+      - serverTargetFolderPath=$serverTargetRootFolderPath/$serverTargetFolderName
+      - serverAddress=$devServerAddress
+      - if [ $DRONE_BRANCH = qa ]; then serverAddress=$qaServerAddress; fi
+      - if [ $DRONE_BRANCH = master ]; then serverAddress=$prodServerAddress; fi
+      - mkdir -p ~/.ssh
+      - chmod 0700 ~/.ssh
+      - ssh-keyscan -t rsa $$serverAddress >> ~/.ssh/known_hosts
+      - echo "    IdentityFile ~/.ssh/id_rsa" >> /etc/ssh/ssh_config
+      - echo "$ssh_prv_key" > ~/.ssh/id_rsa
+      - chmod 700 ~/.ssh/id_rsa
+      - ssh -l LMGLOMB2@LX-EMEA $serverAddress "powershell; Remove-Item \"$${serverTargetFolderPath}/*\" -Exclude \"/C:/*\" -Recurse -Force"
+      - scp -oUser=LMGLOMB2@LX-EMEA -v ./publish.7z $$serverAddress:$${serverTargetFolderPath}/publish.7z
+      - ssh -l LMGLOMB2@LX-EMEA $$serverAddress "7z x $${serverTargetFolderPath}/publish.7z -o$${serverTargetFolderPath}/"
+
+
+trigger:
+  branch:
+    - dev
+    - qa
+
+---
+kind: pipeline
+type: docker
+name: notify
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+  - name: send notification
+    image: drillster/drone-email
+    settings:
+      host: smtp.services.lanxess
+      port: 25
+      skip_verify: true
+      from: no-reply@lanxess.com
+
+trigger:
+  branch:
+    - dev
+    - qa
+  status:
+    - failure
+    - success
+
+depends_on:
+  - default

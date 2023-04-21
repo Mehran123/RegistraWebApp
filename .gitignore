@@ -1,0 +1,11 @@
+src/node_modules
+.nuxt
+buildRelease.ps1
+dist
+publish.7z
+modules/md-loader.js
+publish
+.cache
+node_modules
+*.local
+.vscode/launch.json
